@@ -1,0 +1,35 @@
+﻿@model List<orderLunch.Models.productDetail>
+@{
+    ViewBag.Title = "productList";
+}
+
+<div class="container">
+    <h2>品項管理</h2>
+    <form method="post" action="">
+        
+        <table class="table table-hover" style="font-size:large">
+            <thead>
+                <tr>
+                    <th>品名</th>
+                    <th>價格</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var prod in Model) {
+                    <tr>
+                        <td> @prod.nameOfProduct</td>
+                        <td>@prod.Price</td>
+                    <td></td>
+                </tr>
+                }
+                <tr>
+                    <td><input class="form-control" type="text" name="newProd" placeholder="輸入新品項" /> </td>
+                    <td><input class="form-control" type="text" name="Price"placeholder="輸入新品項價格" /></td>
+                    <td><input class="btn btn-group-sm btn-info"  type="submit" name="OK" value="新增" /></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</div>
+

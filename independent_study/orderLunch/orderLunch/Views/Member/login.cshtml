@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "login";
+}
+
+<div class="row">
+    <div class="main-center">
+        <div class="panel-heading">
+            <div class="panel-title">
+                <h1 class="title" style="font-weight:bolder">登入</h1>
+            </div>
+            <hr />
+        </div>
+
+        <div class="panel-body col-md-offset-4 col-md-6">
+            <form class="form-horizontal" method="post" action="">
+
+                <div class="form-group">
+                    <label for="ID" class="cols-sm-2 control-label">ID</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="ID" id="ID" placeholder="Enter your ID" value="@ViewBag.ID" required=""
+                                   oninvalid="this.setCustomValidity('請輸入帳號')" oninput="setCustomValidity('')" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password" class="cols-sm-2 control-label">Password</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock" aria-hidden="true"></i></span>
+                            <input type="password" class="form-control" name="password" id="password"
+                                   placeholder="Enter your Password" required=""
+                                   oninvalid="this.setCustomValidity('請輸入密碼')" oninput="setCustomValidity('')" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <span style="color:red">
+                        <input style="color:black" type="submit" value="登入" id="OK" name="OK" />
+                        @Html.Raw(ViewBag.errorMessage)
+                    </span>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</div>
+

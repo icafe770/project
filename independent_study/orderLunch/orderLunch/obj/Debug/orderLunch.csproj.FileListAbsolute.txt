@@ -1,0 +1,114 @@
+E:\Independent Study\orderLunch\orderLunch\bin\ApplicationInsights.config
+E:\Independent Study\orderLunch\orderLunch\bin\roslyn\csc.exe
+E:\Independent Study\orderLunch\orderLunch\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Independent Study\orderLunch\orderLunch\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Independent Study\orderLunch\orderLunch\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Independent Study\orderLunch\orderLunch\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Independent Study\orderLunch\orderLunch\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Independent Study\orderLunch\orderLunch\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Independent Study\orderLunch\orderLunch\bin\roslyn\System.Collections.Immutable.dll
+E:\Independent Study\orderLunch\orderLunch\bin\roslyn\System.Reflection.Metadata.dll
+E:\Independent Study\orderLunch\orderLunch\bin\roslyn\vbc.exe
+E:\Independent Study\orderLunch\orderLunch\bin\roslyn\VBCSCompiler.exe
+E:\Independent Study\orderLunch\orderLunch\bin\roslyn\VBCSCompiler.exe.config
+E:\Independent Study\orderLunch\orderLunch\bin\orderLunch.dll.config
+E:\Independent Study\orderLunch\orderLunch\bin\orderLunch.dll
+E:\Independent Study\orderLunch\orderLunch\bin\orderLunch.pdb
+E:\Independent Study\orderLunch\orderLunch\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Independent Study\orderLunch\orderLunch\bin\Microsoft.AI.DependencyCollector.dll
+E:\Independent Study\orderLunch\orderLunch\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Independent Study\orderLunch\orderLunch\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Independent Study\orderLunch\orderLunch\bin\Microsoft.AI.Web.dll
+E:\Independent Study\orderLunch\orderLunch\bin\Microsoft.AI.WindowsServer.dll
+E:\Independent Study\orderLunch\orderLunch\bin\Microsoft.ApplicationInsights.dll
+E:\Independent Study\orderLunch\orderLunch\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Independent Study\orderLunch\orderLunch\bin\Microsoft.Web.Infrastructure.dll
+E:\Independent Study\orderLunch\orderLunch\bin\System.Web.Helpers.dll
+E:\Independent Study\orderLunch\orderLunch\bin\System.Web.Mvc.dll
+E:\Independent Study\orderLunch\orderLunch\bin\System.Web.Razor.dll
+E:\Independent Study\orderLunch\orderLunch\bin\System.Web.Webpages.Deployment.dll
+E:\Independent Study\orderLunch\orderLunch\bin\System.Web.Webpages.dll
+E:\Independent Study\orderLunch\orderLunch\bin\System.Web.Webpages.Razor.dll
+E:\Independent Study\orderLunch\orderLunch\bin\Microsoft.AI.DependencyCollector.xml
+E:\Independent Study\orderLunch\orderLunch\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\Independent Study\orderLunch\orderLunch\bin\Microsoft.AI.Web.xml
+E:\Independent Study\orderLunch\orderLunch\bin\Microsoft.AI.WindowsServer.xml
+E:\Independent Study\orderLunch\orderLunch\bin\Microsoft.ApplicationInsights.xml
+E:\Independent Study\orderLunch\orderLunch\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Independent Study\orderLunch\orderLunch\bin\System.Web.Razor.xml
+E:\Independent Study\orderLunch\orderLunch\bin\System.Web.Webpages.xml
+E:\Independent Study\orderLunch\orderLunch\bin\System.Web.Webpages.Deployment.xml
+E:\Independent Study\orderLunch\orderLunch\bin\System.Web.Webpages.Razor.xml
+E:\Independent Study\orderLunch\orderLunch\bin\System.Web.Helpers.xml
+E:\Independent Study\orderLunch\orderLunch\bin\System.Web.Mvc.xml
+E:\Independent Study\orderLunch\orderLunch\bin\zh-Hant\System.Web.Razor.resources.dll
+E:\Independent Study\orderLunch\orderLunch\bin\zh-Hant\System.Web.Webpages.resources.dll
+E:\Independent Study\orderLunch\orderLunch\bin\zh-Hant\System.Web.Webpages.Deployment.resources.dll
+E:\Independent Study\orderLunch\orderLunch\bin\zh-Hant\System.Web.Webpages.Razor.resources.dll
+E:\Independent Study\orderLunch\orderLunch\bin\zh-Hant\System.Web.Helpers.resources.dll
+E:\Independent Study\orderLunch\orderLunch\bin\zh-Hant\System.Web.Mvc.resources.dll
+E:\Independent Study\orderLunch\orderLunch\obj\Debug\orderLunch.dll
+E:\Independent Study\orderLunch\orderLunch\obj\Debug\orderLunch.pdb
+E:\Independent Study\orderLunch\orderLunch\bin\EntityFramework.dll
+E:\Independent Study\orderLunch\orderLunch\bin\EntityFramework.SqlServer.dll
+E:\Independent Study\orderLunch\orderLunch\bin\EntityFramework.xml
+E:\Independent Study\orderLunch\orderLunch\bin\EntityFramework.SqlServer.xml
+E:\Independent Study\orderLunch\orderLunch\bin\zh-Hant\EntityFramework.resources.dll
+E:\Independent Study\orderLunch\orderLunch\obj\Debug\orderLunch.csprojResolveAssemblyReference.cache
+D:\independent_study\orderLunch\orderLunch\bin\ApplicationInsights.config
+D:\independent_study\orderLunch\orderLunch\bin\roslyn\csc.exe
+D:\independent_study\orderLunch\orderLunch\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\independent_study\orderLunch\orderLunch\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\independent_study\orderLunch\orderLunch\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\independent_study\orderLunch\orderLunch\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\independent_study\orderLunch\orderLunch\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\independent_study\orderLunch\orderLunch\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\independent_study\orderLunch\orderLunch\bin\roslyn\System.Collections.Immutable.dll
+D:\independent_study\orderLunch\orderLunch\bin\roslyn\System.Reflection.Metadata.dll
+D:\independent_study\orderLunch\orderLunch\bin\roslyn\vbc.exe
+D:\independent_study\orderLunch\orderLunch\bin\roslyn\VBCSCompiler.exe
+D:\independent_study\orderLunch\orderLunch\bin\roslyn\VBCSCompiler.exe.config
+D:\independent_study\orderLunch\orderLunch\bin\orderLunch.dll.config
+D:\independent_study\orderLunch\orderLunch\bin\orderLunch.dll
+D:\independent_study\orderLunch\orderLunch\bin\orderLunch.pdb
+D:\independent_study\orderLunch\orderLunch\bin\EntityFramework.dll
+D:\independent_study\orderLunch\orderLunch\bin\EntityFramework.SqlServer.dll
+D:\independent_study\orderLunch\orderLunch\bin\Microsoft.AI.Agent.Intercept.dll
+D:\independent_study\orderLunch\orderLunch\bin\Microsoft.AI.DependencyCollector.dll
+D:\independent_study\orderLunch\orderLunch\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\independent_study\orderLunch\orderLunch\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\independent_study\orderLunch\orderLunch\bin\Microsoft.AI.Web.dll
+D:\independent_study\orderLunch\orderLunch\bin\Microsoft.AI.WindowsServer.dll
+D:\independent_study\orderLunch\orderLunch\bin\Microsoft.ApplicationInsights.dll
+D:\independent_study\orderLunch\orderLunch\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\independent_study\orderLunch\orderLunch\bin\Microsoft.Web.Infrastructure.dll
+D:\independent_study\orderLunch\orderLunch\bin\System.Web.Helpers.dll
+D:\independent_study\orderLunch\orderLunch\bin\System.Web.Mvc.dll
+D:\independent_study\orderLunch\orderLunch\bin\System.Web.Razor.dll
+D:\independent_study\orderLunch\orderLunch\bin\System.Web.Webpages.Deployment.dll
+D:\independent_study\orderLunch\orderLunch\bin\System.Web.Webpages.dll
+D:\independent_study\orderLunch\orderLunch\bin\System.Web.Webpages.Razor.dll
+D:\independent_study\orderLunch\orderLunch\bin\EntityFramework.xml
+D:\independent_study\orderLunch\orderLunch\bin\EntityFramework.SqlServer.xml
+D:\independent_study\orderLunch\orderLunch\bin\Microsoft.AI.DependencyCollector.xml
+D:\independent_study\orderLunch\orderLunch\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\independent_study\orderLunch\orderLunch\bin\Microsoft.AI.Web.xml
+D:\independent_study\orderLunch\orderLunch\bin\Microsoft.AI.WindowsServer.xml
+D:\independent_study\orderLunch\orderLunch\bin\Microsoft.ApplicationInsights.xml
+D:\independent_study\orderLunch\orderLunch\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\independent_study\orderLunch\orderLunch\bin\System.Web.Razor.xml
+D:\independent_study\orderLunch\orderLunch\bin\System.Web.Webpages.xml
+D:\independent_study\orderLunch\orderLunch\bin\System.Web.Webpages.Deployment.xml
+D:\independent_study\orderLunch\orderLunch\bin\System.Web.Webpages.Razor.xml
+D:\independent_study\orderLunch\orderLunch\bin\System.Web.Helpers.xml
+D:\independent_study\orderLunch\orderLunch\bin\System.Web.Mvc.xml
+D:\independent_study\orderLunch\orderLunch\bin\zh-Hant\EntityFramework.resources.dll
+D:\independent_study\orderLunch\orderLunch\bin\zh-Hant\System.Web.Razor.resources.dll
+D:\independent_study\orderLunch\orderLunch\bin\zh-Hant\System.Web.Webpages.resources.dll
+D:\independent_study\orderLunch\orderLunch\bin\zh-Hant\System.Web.Webpages.Deployment.resources.dll
+D:\independent_study\orderLunch\orderLunch\bin\zh-Hant\System.Web.Webpages.Razor.resources.dll
+D:\independent_study\orderLunch\orderLunch\bin\zh-Hant\System.Web.Helpers.resources.dll
+D:\independent_study\orderLunch\orderLunch\bin\zh-Hant\System.Web.Mvc.resources.dll
+D:\independent_study\orderLunch\orderLunch\obj\Debug\orderLunch.csprojResolveAssemblyReference.cache
+D:\independent_study\orderLunch\orderLunch\obj\Debug\orderLunch.dll
+D:\independent_study\orderLunch\orderLunch\obj\Debug\orderLunch.pdb

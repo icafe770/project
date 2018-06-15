@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="OrderLunchModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Members">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="groupID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="passWord" Type="varchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MenuInfo">
+          <Key>
+            <PropertyRef Name="menuId" />
+          </Key>
+          <Property Name="menuId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nameOfVendor" Type="nvarchar" MaxLength="30" />
+          <Property Name="phoneOfVendor" Type="char" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="MenuOfMember">
+          <Key>
+            <PropertyRef Name="memberId" />
+            <PropertyRef Name="menuId" />
+          </Key>
+          <Property Name="memberId" Type="int" Nullable="false" />
+          <Property Name="menuId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="productDetail">
+          <Key>
+            <PropertyRef Name="productId" />
+          </Key>
+          <Property Name="menuId" Type="int" Nullable="false" />
+          <Property Name="productId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nameOfProduct" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Price" Type="varchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="requestList">
+          <Key>
+            <PropertyRef Name="productId" />
+            <PropertyRef Name="nameOfRequester" />
+          </Key>
+          <Property Name="productId" Type="int" Nullable="false" />
+          <Property Name="nameOfRequester" Type="nvarchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <Association Name="FK_MenuOfMember_Members">
+          <End Role="Members" Type="Self.Members" Multiplicity="1" />
+          <End Role="MenuOfMember" Type="Self.MenuOfMember" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Members">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="MenuOfMember">
+              <PropertyRef Name="memberId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MenuOfMember_MenuInfo">
+          <End Role="MenuInfo" Type="Self.MenuInfo" Multiplicity="1" />
+          <End Role="MenuOfMember" Type="Self.MenuOfMember" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MenuInfo">
+              <PropertyRef Name="menuId" />
+            </Principal>
+            <Dependent Role="MenuOfMember">
+              <PropertyRef Name="menuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_productDetail_MenuInfo">
+          <End Role="MenuInfo" Type="Self.MenuInfo" Multiplicity="1" />
+          <End Role="productDetail" Type="Self.productDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MenuInfo">
+              <PropertyRef Name="menuId" />
+            </Principal>
+            <Dependent Role="productDetail">
+              <PropertyRef Name="menuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_requestList_productDetail">
+          <End Role="productDetail" Type="Self.productDetail" Multiplicity="1" />
+          <End Role="requestList" Type="Self.requestList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="productDetail">
+              <PropertyRef Name="productId" />
+            </Principal>
+            <Dependent Role="requestList">
+              <PropertyRef Name="productId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="OrderLunchModelStoreContainer">
+          <EntitySet Name="Members" EntityType="Self.Members" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MenuInfo" EntityType="Self.MenuInfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MenuOfMember" EntityType="Self.MenuOfMember" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="productDetail" EntityType="Self.productDetail" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="requestList" EntityType="Self.requestList" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_MenuOfMember_Members" Association="Self.FK_MenuOfMember_Members">
+            <End Role="Members" EntitySet="Members" />
+            <End Role="MenuOfMember" EntitySet="MenuOfMember" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MenuOfMember_MenuInfo" Association="Self.FK_MenuOfMember_MenuInfo">
+            <End Role="MenuInfo" EntitySet="MenuInfo" />
+            <End Role="MenuOfMember" EntitySet="MenuOfMember" />
+          </AssociationSet>
+          <AssociationSet Name="FK_productDetail_MenuInfo" Association="Self.FK_productDetail_MenuInfo">
+            <End Role="MenuInfo" EntitySet="MenuInfo" />
+            <End Role="productDetail" EntitySet="productDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_requestList_productDetail" Association="Self.FK_requestList_productDetail">
+            <End Role="productDetail" EntitySet="productDetail" />
+            <End Role="requestList" EntitySet="requestList" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="OrderLunchModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Member">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="groupID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="passWord" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="MenuInfoes" Relationship="OrderLunchModel.MenuOfMember" FromRole="Member" ToRole="MenuInfo" />
+        </EntityType>
+        <EntityContainer Name="OrderLunchEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Members" EntityType="Self.Member" />
+          <EntitySet Name="MenuInfoes" EntityType="OrderLunchModel.MenuInfo" />
+          <EntitySet Name="productDetails" EntityType="OrderLunchModel.productDetail" />
+          <EntitySet Name="requestLists" EntityType="OrderLunchModel.requestList" />
+          <EntitySet Name="sysdiagrams" EntityType="OrderLunchModel.sysdiagram" />
+          <AssociationSet Name="FK_productDetail_MenuInfo" Association="OrderLunchModel.FK_productDetail_MenuInfo">
+            <End Role="MenuInfo" EntitySet="MenuInfoes" />
+            <End Role="productDetail" EntitySet="productDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_requestList_productDetail" Association="OrderLunchModel.FK_requestList_productDetail">
+            <End Role="productDetail" EntitySet="productDetails" />
+            <End Role="requestList" EntitySet="requestLists" />
+          </AssociationSet>
+          <AssociationSet Name="MenuOfMember" Association="OrderLunchModel.MenuOfMember">
+            <End Role="Member" EntitySet="Members" />
+            <End Role="MenuInfo" EntitySet="MenuInfoes" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="MenuInfo">
+          <Key>
+            <PropertyRef Name="menuId" />
+          </Key>
+          <Property Name="menuId" Type="Int32" Nullable="false" />
+          <Property Name="nameOfVendor" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="phoneOfVendor" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="productDetails" Relationship="OrderLunchModel.FK_productDetail_MenuInfo" FromRole="MenuInfo" ToRole="productDetail" />
+          <NavigationProperty Name="Members" Relationship="OrderLunchModel.MenuOfMember" FromRole="MenuInfo" ToRole="Member" />
+        </EntityType>
+        <EntityType Name="productDetail">
+          <Key>
+            <PropertyRef Name="productId" />
+          </Key>
+          <Property Name="menuId" Type="Int32" Nullable="false" />
+          <Property Name="productId" Type="Int32" Nullable="false" />
+          <Property Name="nameOfProduct" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Price" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="MenuInfo" Relationship="OrderLunchModel.FK_productDetail_MenuInfo" FromRole="productDetail" ToRole="MenuInfo" />
+          <NavigationProperty Name="requestLists" Relationship="OrderLunchModel.FK_requestList_productDetail" FromRole="productDetail" ToRole="requestList" />
+        </EntityType>
+        <EntityType Name="requestList">
+          <Key>
+            <PropertyRef Name="productId" />
+            <PropertyRef Name="nameOfRequester" />
+          </Key>
+          <Property Name="productId" Type="Int32" Nullable="false" />
+          <Property Name="nameOfRequester" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="productDetail" Relationship="OrderLunchModel.FK_requestList_productDetail" FromRole="requestList" ToRole="productDetail" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <Association Name="FK_productDetail_MenuInfo">
+          <End Type="OrderLunchModel.MenuInfo" Role="MenuInfo" Multiplicity="1" />
+          <End Type="OrderLunchModel.productDetail" Role="productDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MenuInfo">
+              <PropertyRef Name="menuId" />
+            </Principal>
+            <Dependent Role="productDetail">
+              <PropertyRef Name="menuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_requestList_productDetail">
+          <End Type="OrderLunchModel.productDetail" Role="productDetail" Multiplicity="1" />
+          <End Type="OrderLunchModel.requestList" Role="requestList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="productDetail">
+              <PropertyRef Name="productId" />
+            </Principal>
+            <Dependent Role="requestList">
+              <PropertyRef Name="productId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="MenuOfMember">
+          <End Type="OrderLunchModel.Member" Role="Member" Multiplicity="*" />
+          <End Type="OrderLunchModel.MenuInfo" Role="MenuInfo" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="OrderLunchModelStoreContainer" CdmEntityContainer="OrderLunchEntities">
+          <EntitySetMapping Name="Members">
+            <EntityTypeMapping TypeName="OrderLunchModel.Member">
+              <MappingFragment StoreEntitySet="Members">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="groupID" ColumnName="groupID" />
+                <ScalarProperty Name="passWord" ColumnName="passWord" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MenuInfoes">
+            <EntityTypeMapping TypeName="OrderLunchModel.MenuInfo">
+              <MappingFragment StoreEntitySet="MenuInfo">
+                <ScalarProperty Name="phoneOfVendor" ColumnName="phoneOfVendor" />
+                <ScalarProperty Name="nameOfVendor" ColumnName="nameOfVendor" />
+                <ScalarProperty Name="menuId" ColumnName="menuId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="productDetails">
+            <EntityTypeMapping TypeName="OrderLunchModel.productDetail">
+              <MappingFragment StoreEntitySet="productDetail">
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="nameOfProduct" ColumnName="nameOfProduct" />
+                <ScalarProperty Name="productId" ColumnName="productId" />
+                <ScalarProperty Name="menuId" ColumnName="menuId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="requestLists">
+            <EntityTypeMapping TypeName="OrderLunchModel.requestList">
+              <MappingFragment StoreEntitySet="requestList">
+                <ScalarProperty Name="nameOfRequester" ColumnName="nameOfRequester" />
+                <ScalarProperty Name="productId" ColumnName="productId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="OrderLunchModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="MenuOfMember" TypeName="OrderLunchModel.MenuOfMember" StoreEntitySet="MenuOfMember">
+            <EndProperty Name="MenuInfo">
+              <ScalarProperty Name="menuId" ColumnName="menuId" />
+            </EndProperty>
+            <EndProperty Name="Member">
+              <ScalarProperty Name="ID" ColumnName="memberId" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="無" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

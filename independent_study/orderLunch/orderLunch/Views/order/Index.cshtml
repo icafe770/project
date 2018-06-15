@@ -1,0 +1,27 @@
+﻿@model List<orderLunch.Models.MenuListView>
+@{
+    ViewBag.Title = "Order";
+}
+
+
+<div class="container">
+    <h2><span>訂單管理 </span></h2>
+    <table class="table table-hover" style="font-size:large">
+        <thead>
+            <tr>
+                <th class="col-sm-5">菜單名稱</th>
+                <th class="col-sm-5">總價</th>
+                <th class="col-sm-2"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var menu in Model) {
+                <tr>
+                    <td><a href="~/order/orderDetail/@menu.menuId">@menu.nameOfVendor (@menu.phoneOfVendor)</a></td>
+                    <td>30</td>
+                    <td><a class="btn btn-sm btn-danger" href="~/menu/deleteMenu/@menu.menuId"><span><span class="glyphicon glyphicon-remove"></span> Delete</span></a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

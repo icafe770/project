@@ -1,0 +1,76 @@
+﻿@model orderLunch.Models.Member
+@{
+    ViewBag.Title = "edit";
+}
+
+<div class="row">
+    <div class="main-center">
+        <div class="panel-heading">
+            <div class="panel-title">
+                <h1 class="title" style="font-weight:bolder">修改資料</h1>
+            </div>
+            <hr />
+        </div>
+
+        <div class="panel-body col-md-offset-4 col-md-6">
+            <form class="form-horizontal" method="post" action="">
+                <input type="hidden" name="ID" value=@Model.ID />
+                <div class="form-group">
+                    <label for="groupID" class="cols-sm-2 control-label">ID</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="groupID" id="groupID" placeholder="Enter your ID" value="@Model.groupID" disabled />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password" class="cols-sm-2 control-label">Original Password</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock" aria-hidden="true"></i></span>
+                            <input type="password" class="form-control" name="orgPassword" id="orgPassword"
+                                   placeholder="Enter your Original Password" required=""
+                                   oninvalid="this.setCustomValidity('請輸入原密碼')" oninput="setCustomValidity('')" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password" class="cols-sm-2 control-label">New Password</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock" aria-hidden="true"></i></span>
+                            <input type="password" class="form-control" name="newPassword" id="newPassword"
+                                   placeholder="Enter your New Password" required=""
+                                   oninvalid="this.setCustomValidity('請輸入新密碼')" oninput="setCustomValidity('')" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="confirm" class="cols-sm-2 control-label">Confirm New Password</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock" aria-hidden="true"></i></span>
+                            <input type="password" class="form-control" name="confirm" id="confirm" placeholder="Confirm your Password" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group ">
+                    <span style="color:red">
+                        <input class="btn" style="color:black" type="submit" value="Edit" id="OK" name="checkBtn" />
+                        
+                        @Html.Raw(ViewBag.errorMessage)
+                    </span>
+                    
+                </div>
+
+            </form>
+            <div class="col-md-5 pull-right">
+                <a class="btn btn-sm btn-danger" href="~/">Cancel</a>
+            </div>
+        </div>
+    </div>
+</div>
+

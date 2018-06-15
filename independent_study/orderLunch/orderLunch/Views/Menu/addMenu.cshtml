@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewBag.Title = "addMenu";
+}
+
+<div class="row">
+    <div class="main-center">
+        <div class="panel-heading">
+            <div class="panel-title">
+                <h1 class="title" style="font-weight:bolder">新增商家</h1>
+            </div>
+            <hr />
+        </div>
+
+        <div class="panel-body col-md-offset-4 col-md-6">
+            <form class="form-horizontal" method="post" action="">
+
+                <div class="form-group">
+                    <label for="nameOfVendor" class="cols-sm-2 control-label">商家名稱</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-info-sign" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="nameOfVendor" id="nameOfVendor" placeholder="Enter name of vendor"  required=""
+                                   oninvalid="this.setCustomValidity('請輸入商家名稱')" oninput="setCustomValidity('')" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="phoneOfVendor" class="cols-sm-2 control-label">商家電話</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-phone-alt" aria-hidden="true"></i></span>
+                            <input type="tel" class="form-control" name="phoneOfVendor" id="phoneOfVendor"
+                                   placeholder="Enter Phone of Vendor" required=""
+                                   oninvalid="this.setCustomValidity('請輸入商家電話')" oninput="setCustomValidity('')" />
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="form-group ">
+                    <span style="color:red">
+                        <input style="color:black" type="submit" value="新增" id="OK" name="OK" />
+                        @Html.Raw(ViewBag.errorMessage)
+                    </span>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</div>
+
